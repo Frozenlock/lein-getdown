@@ -22,7 +22,8 @@ project.clj.
 
 
 You will also have to add a =:getdown= map with your own Getdown
-configurations. *You must at least have the :appbase address*.
+configurations. 
+*You must at least have the :appbase address*.
 
 : :getdown {:appbase "https://bacnethelp.com/getdown/logger/"
 :           :allow-offline true
@@ -31,7 +32,7 @@ configurations. *You must at least have the :appbase address*.
 Your main clojure application is automatically added in the getdown
 config file.
 
-The plugin attach itself to the =lein uberjar= command. Thus,
+The plugin attaches itself to the =lein uberjar= command. Thus,
 everytime you uberjar your application, the directory
 =/target/getdown/= will be created/updated with the required files to
 put on your webserver.
