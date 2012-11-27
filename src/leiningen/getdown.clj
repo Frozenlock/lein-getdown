@@ -1,6 +1,2 @@
-(ns leiningen.getdown)
-
-(defn getdown
-  "I don't do a lot."
-  [project & args]
-  (println "Hi!"))
+(ns leiningen.getdown
+  (:use [lein-getdown.plugin]))

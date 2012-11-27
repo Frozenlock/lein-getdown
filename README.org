@@ -1,0 +1,43 @@
+* lein-getdown
+
+A Leiningen plugin to use the Getdown java utility. Enables
+auto-update (for the user) of your Clojure application!
+
+See the [[https://code.google.com/p/getdown/][Getdown documentation on google code]].
+
+[[./lein-getdown/raw/master/ui_diagram.png]]
+
+
+** Usage
+
+User-level plugins:
+
+Put =[lein-getdown "0.0.1"]= into the =:plugins= vector of your
+=:user= profile.
+
+Project-level plugins:
+
+Put =[lein-getdown "0.0.1"]= into the =:plugins= vector of your
+project.clj.
+
+
+You will also have to add a =:getdown= map with your own Getdown
+configurations. *You must at least have the :appbase address*.
+
+: :getdown {:appbase "https://bacnethelp.com/getdown/logger/"
+:           :allow-offline true
+:           :resource ["wontbeunpacked.jar" "another-jar.jar"]}
+
+Your main clojure application is automatically added in the getdown
+config file.
+
+The plugin attach itself to the =lein uberjar= command. Thus,
+everytime you uberjar your application, the directory
+=/target/getdown/= will be created/updated with the required files to
+put on your webserver.
+
+** License
+
+Copyright © 2012 Frozenlock
+
+Distributed under the Eclipse Public License, the same as Clojure.
