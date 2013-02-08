@@ -5,7 +5,7 @@ auto-update (for the user) of your Clojure application!
 
 See the [[https://code.google.com/p/getdown/][Getdown documentation on google code]].
 
-[[./lein-getdown/raw/master/ui_diagram.png]]
+[[./ui_diagram.png]]
 
 
 ** Usage
